@@ -31,7 +31,7 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     WebView wllWebView;
-    private static final String webUrl = "http://10.0.1.161:3000/?tenant=restaurant";
+    private static final String webUrl = "https://bk-ch.web.wlloyalty.net/";
     private static final String TAG = MainActivity.class.getSimpleName();
     private String mCM;
     private ValueCallback<Uri> mUploadMessage;
