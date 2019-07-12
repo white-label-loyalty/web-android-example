@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent){
         super.onActivityResult(requestCode, resultCode, intent);
-        Log.d(TAG, "Does this even work");
+
         if(Build.VERSION.SDK_INT >= 21){
             Uri[] results = null;
             //Check if response is positive
@@ -95,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent i = new Intent(Intent.ACTION_GET_CONTENT);
                 i.addCategory(Intent.CATEGORY_OPENABLE);
                 i.setType("*/*");
-                Log.d(TAG, "Hello there");
                 startActivityForResult(Intent.createChooser(i, "File Browser"), 1);
             }
             public boolean onShowFileChooser(WebView webView, ValueCallback<Uri[]> filePathCallback, WebChromeClient.FileChooserParams fileChooserParams) {
